@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Tushar kumar Portfolio" content="width=device-width, initial-scale=1.0">
-    <title>Tushar Kumar</title>
+    <title>Tushar Kumar | AI Engineer</title>
     <!--=================== Google Fonts ====================-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
 
 
     <!--=================== Remixicons ====================-->
@@ -21,8 +22,10 @@
 
 
     <!--=================== Main CSS ====================-->
-    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="style.css">
+    <!-- ============== CERTIFICATE CSS (REMOVED LINK) ============== -->
+    <!-- <link rel="stylesheet" href="certificates.css"> -->
+
 
 </head>
 
@@ -33,15 +36,22 @@
         <div class="container">
             <nav class="nav">
                 <a href="index.html" class="nav__brand">
-                    <i class="section__title"></i>Tushar<Span>Kumar</Span>
+                    Tushar
+                    <span class="nav__brand-span">Kumar</span>
                 </a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#hero" class="nav__link">Home</a>
                         </li>
+                        <!-- REMOVED: About Link -->
+                        <!-- 
                         <li class="nav__item">
                             <a href="#about" class="nav__link">About</a>
+                        </li>
+                         -->
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">Skills</a>
                         </li>
                         <li class="nav__item">
                             <a href="#qualification" class="nav__link">Qualification</a>
@@ -49,123 +59,196 @@
                         <li class="nav__item">
                             <a href="#project" class="nav__link">Projects</a>
                         </li>
+                        <!-- Link to new Certificate section (REMOVED) -->
+                        <!-- 
                         <li class="nav__item">
-                            <a href="#contact"  class="nav__link">Contact</a>
+                            <a href="#certificates" class="nav__link">Certificates</a>
+                        </li>
+                         -->
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item">
+                            <!-- Update href to your resume file -->
+                            <a href="Tushar Kumar resume.pdf" download class="nav__link nav__link--button">
+                                Resume <i class="ri-download-2-line"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
-                <div class="nav__toggle">
-                    <i id="nav-toggle" class="ri-menu-3-line"></i>
+
+                <!-- NEW Theme Toggle & Mobile Toggle Wrapper -->
+                <div class="nav__actions">
+                    <i class="ri-moon-line theme-toggle" id="theme-toggle"></i>
+                    <div class="nav__toggle">
+                        <i id="nav-toggle" class="ri-menu-3-line"></i>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
     <!--=================== main ====================-->
     <main class="main">
-    <!--=================== footer ====================-->
-    <footer id="footer" class="footer">
-        <ul class="footer__social-list">
-            <li class="footer__social-item">
-                <a href="mailto:tusharkumar5021@gmail.com" target="_blank" class="footer__social-link">
-                <i class="ri-mail-fill"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://www.instagram.com/__tushar_.kr/" target="_blank" class="footer__social-link">
-                                <i class="ri-instagram-fill"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://www.linkedin.com/in/tusharkumar08/" target="_blank" class="footer__social-link">
-                                <i class="ri-linkedin-fill"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://github.com/Tusharkumar008?tab=repositories" target="_blank" class="footer__social-link">
-                                <i class="ri-github-fill"></i>
-                            </a>
-                        </li>
-                    </ul>
-    </footer>
+        <!--=================== Sticky Social Bar ====================-->
+        <aside class="social__sidebar">
+            <ul class="social__sidebar-list">
+                <li class="social__sidebar-item">
+                    <a href="mailto:tusharkumar5021@gmail.com" target="_blank" class="social__sidebar-link">
+                        <i class="ri-mail-fill"></i>
+                    </a>
+                </li>
+                <li class="social__sidebar-item">
+                    <a href="https://www.instagram.com/__tushar_.kr/" target="_blank" class="social__sidebar-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                </li>
+                <li class="social__sidebar-item">
+                    <a href="https://www.linkedin.com/in/tusharkumar08/" target="_blank" class="social__sidebar-link">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+                </li>
+                <li class="social__sidebar-item">
+                    <a href="https://github.com/Tusharkumar008?tab=repositories" target="_blank"
+                        class="social__sidebar-link">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
         <!--=================== Hero ====================-->
-        <section id="hero" class="hero">
+        <section id="hero" class="section hero">
             <div class="container">
                 <div class="d-grid hero__wrapper">
                     <div class="hero__content">
-                        <h1 class="hero__title">Hi, I am Tushar,<br>Machine learning Engineer.</h1>
-                        <p class="hero__description">I'm a Passionate AIML engineer with expertise in developing and deploying machine learning models. Skilled in data analysis, algorithm design, and optimization techniques. Committed to innovation and driving impactful solutions.
+                        <h1 class="hero__title">Hi, I'm Tushar,
+                            <br>
+                            <span class="hero__title-span">
+                                <span id="role-text"></span><span class="role-cursor">|</span>
+                            </span>
+                        </h1>
+
+                        <p class="hero__description">Passionate AI/ML engineer skilled in developing and deploying
+                            intelligent models. Specializing in data analysis, algorithm design, and driving impactful,
+                            innovative solutions.
                         </p>
                         <div class="hero__info">
                             <div class="hero__info-wrapper">
-                                <p class="hero__info-number">03</p>
+                                <p class="hero__info-number">6<span class="hero__info-number-span">+</span></p>
                                 <h2 class="hero__info-title">Months<br>Experience</h2>
                             </div>
                             <div class="hero__info-wrapper">
-                                <p class="hero__info-number">10</p>
+                                <p class="hero__info-number">10<span class="hero__info-number-span">+</span></p>
                                 <h2 class="hero__info-title">Projects<br>Completed</h2>
                             </div>
-                            <!-- <div class="hero__info-wrapper">
-                                <p class="hero__info-number">03+</p>
-                                <h2 class="hero__info-title">Companies<br> Worked</h2>
-                            </div> -->
                         </div>
                     </div>
-                    <img src="tushar.png" alt="Shawn" class="tushar__img">
+                    <!-- Update the src to your image path -->
+                    <img src="Tushar.jpg" alt="Tushar Kumar" class="hero__img">
                 </div>
             </div>
         </section>
 
-        <!--=================== About ====================-->
-        <section id="about" class="section about">
+        <!--=================== About (REMOVED) ====================-->
+        
+
+        <!--=================== Skills ====================-->
+        <section id="skills" class="section skills">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">About Me</h2>
-                    <span class="section__subtitle">Who am I</span>
+                    <h2 class="section__title">Skills</h2>
+                    <span class="section__subtitle">My Technical Toolkit</span>
                 </div>
-                <div class="d-grid about__wrapper">
-                    <div class="about__content">
-                        <h3 class="about__title">I'm a Professional Machine Learning Engineer.</h3>
-                        <p class="about__description">Passionate about the intersection of technology and intelligence, I have specialized in developing and deploying Artificial Intelligence and Machine Learning models. With hands-on experience in harnessing the power of data, I thrive on translating complex concepts into tangible, impactful solutions.
-                            Proficient in languages such as Python and frameworks like TensorFlow and PyTorch, I navigate the complexities of AI with confidence. My toolbox includes a range of data science and machine learning tools, ensuring versatility in addressing diverse challenges. I am committed to contributing to the broader AI and ML community. I strive to be an active participant in the ever-evolving landscape of artificial intelligence
-                        </p>
-                        <button class="rounded-button">Know More</button>
-                        <a href="https://www.linkedin.com/in/tusharkumar08/" target="_blank" class="footer__social-link"></a>
-                    </div>
 
-                    <div class="skills">
-                        <h3 class="skills__title">Technologies I've been working with:</h3>
-                        <div class="skills__wrapper">
-                            <div class="skills__content">
-                                <h4 class="skills__subtitle">Machine Learning</h4>
-                                <ul class="skills__list">
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        Python</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        Deep Learninng</li>
-                                    <!-- <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        Firebase</li> -->
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        Tenser flow</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        NLP</li>
-                                </ul>
-                            </div>
-                            <div class="skills__content">
-                                <h4 class="skills__subtitle">Frontend</h4>
-                                <ul class="skills__list">
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        HTML</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        CSS</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        JavaScript</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        React</li>
-                                    <!-- <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
-                                        Vue.js</li> -->
-                                </ul>
-                            </div>
-                            
+                <div class="skills__category">
+                    <h3 class="skills__category-title">AI & Machine Learning</h3>
+                    <div class="d-grid skills__grid">
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/25ab75/FFFFFF?text=ML&font=spacemono"
+                                alt="Machine Learning" class="skill__card-img">
+                            <h4 class="skill__card-name">Machine Learning</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/25ab75/FFFFFF?text=DL&font=spacemono"
+                                alt="Deep Learning" class="skill__card-img">
+                            <h4 class="skill__card-name">Deep Learning</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/25ab75/FFFFFF?text=GenAI&font=spacemono"
+                                alt="Generative AI" class="skill__card-img">
+                            <h4 class="skill__card-name">Generative AI</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/25ab75/FFFFFF?text=PyT&font=spacemono" alt="PyTorch"
+                                class="skill__card-img">
+                            <h4 class="skill__card-name">PyTorch</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/25ab75/FFFFFF?text=NLP&font=spacemono" alt="NLP"
+                                class="skill__card-img">
+                            <h4 class="skill__card-name">NLP</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/25ab75/FFFFFF?text=CV&font=spacemono"
+                                alt="Computer Vision" class="skill__card-img">
+                            <h4 class="skill__card-name">Computer Vision</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__category">
+                    <h3 class="skills__category-title">Data Science & Programming</h3>
+                    <div class="d-grid skills__grid">
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/00bcd4/FFFFFF?text=Py&font=spacemono" alt="Python"
+                                class="skill__card-img">
+                            <h4 class="skill__card-name">Python</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/00bcd4/FFFFFF?text=SQL&font=spacemono" alt="SQL"
+                                class="skill__card-img">
+                            <h4 class="skill__card-name">SQL</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/00bcd4/FFFFFF?text=Pandas&font=spacemono"
+                                alt="Pandas" class="skill__card-img">
+                            <h4 class="skill__card-name">Pandas</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/00bcd4/FFFFFF?text=NumPy&font=spacemono" alt="NumPy"
+                                class="skill__card-img">
+                            <h4 class="skill__card-name">NumPy</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__category">
+                    <h3 class="skills__category-title">Web & Other</h3>
+                    <div class="d-grid skills__grid">
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/676767/FFFFFF?text=HTML&font=spacemono" alt="HTML"
+                                class="skill__card-img">
+                            <h4 class="skill__card-name">HTML</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/676767/FFFFFF?text=CSS&font=spacemono" alt="CSS"
+                                class="skill__card-img">
+                            <h4 class="skill__card-name">CSS</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/676767/FFFFFF?text=JS&font=spacemono"
+                                alt="JavaScript" class="skill__card-img">
+                            <h4 class="skill__card-name">JavaScript</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/676767/FFFFFF?text=React&font=spacemono" alt="React"
+                                class="skill__card-img">
+                            <h4 class="skill__card-name">React</h4>
+                        </div>
+                        <div class="skill__card">
+                            <img src="https://placehold.co/100x100/676767/FFFFFF?text=Git&font=spacemono" alt="Git"
+                                class="skill__card-img">
+                            <h4 class="skill__card-name">Git</h4>
                         </div>
                     </div>
                 </div>
@@ -186,41 +269,48 @@
                         Education
                     </h3>
                     <div class="d-grid qualification__content">
-                        
+
                         <div class="qualification__item">
-                            <h3 class="qualification__title">NSHM KNOWLEDGE CAMPUS, DURGAPUR</h3>
-                            <p class="qualification__description">As a ARTIFICIAL Intelligence & MACHINE LEARNING student, I have a strong foundation in algorithms, data structures, software design and Development.
-                                My coursework has provided me with a understanding of the principles and practices of computer science,
-                                and I have honed my programming skills through various projects and assignments.
-                            </p>
-                            <p class="qualification__description"> Current CGPA = 8.5
+                            <h3 class="qualification__title">B.Tech, AI & Machine Learning</h3>
+                            <p class="qualification__description">NSHM KNOWLEDGE CAMPUS, DURGAPUR
+                                <br>
+                                Strong foundation in Artificial Intelligence, Machine Learning, 
+                                and Data Science, with coursework emphasizing model development, data-driven decision-making, 
+                                and the application of AI in solving real-world problems.
+                                <br>
+                                CGPA = 8.39
                             </p>
                             <span class="qualification__date">2021 - 2025</span>
-                
-                            
                         </div>
                         <div class="qualification__item">
-                            <h3 class="qualification__title">KCP SIDDHARTHA ADARSH RESIDENTIAL PUBLIC SCHOOL, VIJAYWADA, AP</h3>
-                            <p class="qualification__description">KCPSARRP School in Vijayawada offers comprehensive higher secondary education with a focus on academic excellence, holistic development, and opportunities for personal growth through diverse extracurricular activities and modern facilities.
-                            </p>
-                            <p class="qualification__description">Marks = 91.6%
+                            <h3 class="qualification__title">Higher Secondary (Class XII)</h3>
+                            <p class="qualification__description">KCP SIDDHARTHA ADARSH RESIDENTIAL PUBLIC SCHOOL,
+                                VIJAYWADA, AP
+                                <br>
+                                Focused on academic excellence and holistic development.
+                                <br>
+                                Marks = 91.6%
                             </p>
                             <span class="qualification__date">2020 - 2021</span>
                         </div>
                         <!-- Education 3-->
                         <div class="qualification__item">
-                            <h3 class="qualification__title">KCP SIDDHARTHA ADARSH RESIDENTIAL PUBLIC SCHOOL, VIJAYWADA, AP</h3>
-                            <p class="qualification__description">KCPSARRP School in Vijayawada provides holistic education emphasizing character development, academic excellence, and extracurricular activities. Known for its nurturing environment, it fosters students' overall growth and prepares them for future challenges.
-                            </p>
-                            <p class="qualification__description">Marks = 87.4%
+                            <h3 class="qualification__title">Secondary (Class X)</h3>
+                            <p class="qualification__description">KCP SIDDHARTHA ADARSH RESIDENTIAL PUBLIC SCHOOL,
+                                VIJAYWADA, AP
+                                <br>
+                                Nurturing environment fostering overall growth.
+                                <br>
+                                Marks = 87.4%
                             </p>
                             <span class="qualification__date">2018 - 2019</span>
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <div class="qualification__footer">
-                    <p class="qualification__footer-text">See My Resume</p>
-                    <a href="Tushar Kumar Resume.pdf" download class="btn btn--primary">Resume</a>
+                    <p class="qualification__footer-text">See My Full Resume</p>
+                    <!-- Update href to your resume file -->
+                    <a href="Tushar Kumar resume.pdf" download class="btn btn--primary">Download Resume</a>
                 </div>
             </div>
         </section>
@@ -230,95 +320,207 @@
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">Projects</h2>
-                    <span class="section__subtitle">My recent work</span>
+                    <span class="section__subtitle">My Recent Work</span>
                 </div>
                 <div class="d-grid project__wrapper">
                     <!--============== project 1 =============-->
                     <div class="project__content">
-                        <img src="Language.png" alt="Language Website" class="Language__img">
-                        <h3 class="project__title">Portfolio</h3>
-                        <p class="project__description">Welcome to my portfolio, Explore my projects to see how I blend innovation, technical skills, and creativity to drive meaningful outcomes. </p>
-                        <div class="project__link-container">
-                            <a href="https://github.com/Tusharkumar008/Portfolio" class="project__link">View Project
+                        <div class="project__image-wrapper">
+                            <img src="Project/Linkedin.png" alt="Python Badge" style="margin-top: 10px;">
+                        </div>
+                        <div class="project__info">
+                            <h3 class="project__title">LinkedIn-Job-Scraper</h3>
+                            <p class="project__description"> IT is an automated Python-based tool designed to simplify and speed up the 
+                                job search process by extracting job-related data directly from LinkedIn posts.</p>
+                            <div class="project__tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">selenium</span>
+                                <span class="tech-badge">openpyxl</span>
+                                <span class="tech-badge">Pandas</span>
+                            </div>
+                            <a href="https://github.com/Tusharkumar008/LinkedIn-Job-Scraper" target="_blank"
+                                class="project__link">View Project
                                 <i class="ri-arrow-right-line"></i>
                             </a>
+                            
                         </div>
                     </div>
                     <!--============== project 2 =============-->
                     <div class="project__content">
-                        <img src="Travel-Companion.png" alt="Travel-Companion.Application" class="project__img">
-                        <h3 class="project__title">Parkinsons-Disease</h3>
-                        <p class="project__description">This project aims to develop a machine learning model to predict the presence of Parkinson's disease in patients using various clinical and demographic data.</p>
-                        <div class="project__link-container">
-                            <a href="https://github.com/Tusharkumar008/Parkinsons-Disease" class="project__link">View Project
+                        <div class="project__image-wrapper">
+                            <img src="Project/Bio.png" alt="Travel-Companion Application" class="project__img">
+                        </div>
+                        <div class="project__info">
+                            <h3 class="project__title">Bio-Lens</h3>
+                            <p class="project__description">Bio Lens is an AI-powered web application designed to assist farmers, gardeners, and agricultural enthusiasts in identifying plant diseases, providing treatment 
+                                recommendations, and fostering a community for knowledge sharing.</p>
+                            <div class="project__tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">TensorFlow</span>
+                                <span class="tech-badge">Computer Vision</span>
+                                <span class="tech-badge">Gemini API</span>
+                                <span class="tech-badge">Flask</span>
+                                <span class="tech-badge">Mysql</span>
+                            </div>
+                            <a href="https://github.com/Tusharkumar008/Bio-Lense" target="_blank" class="project__link">View Project
                                 <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                     </div>
                     <!--============== project 3 =============-->
-                    <!-- <div class="project__content">
-                        <img src="assets/img/project4.png" alt="Ecommerce Website" class="project__img">
-                        <h3 class="project__title">Website Landing Page</h3>
-                        <p class="project__description">Website dashboard adaptable to all devices, 
-                        with ui components and animated interactions.</p>
-                        <a href="https://github.com/MuneneCalvin/100-Days-Of-Code/tree/main/Month%201/Week%2001/Day%2006" class="project__link">View Project
-                            <i class="ri-arrow-right-line"></i></a> -->
-                    <!-- </div> -->
-                    <!-- ============== project 4 ============= -->
-                    <!-- <div class="project__content">
-                        <img src="assets/img/preview_5.png" alt="Crypto Application " class="project__img">
-                        <h3 class="project__title">Modern Portfolio</h3>
-                        <p class="project__description">Portfolio responsive to all devices, 
-                        with ui components and smooth scroll.</p>
-                        <a href="#" class="project__link">View Project
-                            <i class="ri-arrow-right-line"></i></a> -->
+                    <div class="project__content">
+                        <div class="project__image-wrapper">
+                            <img src="Project/EV.png" alt="Face Detection" class="project__img">
+                        </div>
+                        <div class="project__info">
+                            <h3 class="project__title">EV Sales Prediction</h3>
+                            <p class="project__description">"EV Sales Prediction" forecasts future electric vehicle sales using Python, Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn. 
+                                It analyzes data to predict market trends and inform strategic decisions in the EV industry.</p>
+                            <div class="project__tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Matplotlib & Seaborn</span>
+                                <span class="tech-badge">Scikit-learn (sklearn)</span>
+                                <span class="tech-badge">Regression Models</span>
+                            </div>
+                            <a href="https://github.com/Tusharkumar008/EV-Sales-Prediction" target="_blank" class="project__link">View Project
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--=================== Testimonials ====================-->
-        <!-- <section id="testimonial" class="section testimonial">
+        <!--=================== Certificates (Replaced Testimonials) ====================-->
+        <section id="certificates" class="section certificates">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Testimonials</h2>
-                    <span class="section__subtitle">What my clients say</span>
+                    <h2 class="section__title">Certificates</h2>
+                    <span class="section__subtitle">Professional Certifications & Licenses</span>
                 </div>
+                <!-- This wrapper class is targeted by main.js for the Swiper slider -->
                 <div class="testimonial__wrapper swiper">
                     <div class="swiper-wrapper">
-                        <!--========= testimonial 1 ============ -->
-                        <!-- <div class="testimonial__card swiper-slide">
-                            <img src="assets/img/testimonial1.jpg" alt="Natasha Smith" class="testimonial__img">
-                            <div class="testimonial__content">
-                                <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur. Dignissim
-                                    tincidunt egestas vitae porttitor nulla gravida commodo.</p>
-                                <h3 class="testimonial__name">Natasha Smith</h3>
-                                <span class="testimonial__occupation">UI/UX Designer at Dribbble</span>
+                        
+                        <!--========= Certificate 1 ============ -->
+                        <!-- 
+                            Update href to the path of your certificate file/URL 
+                            Update the img src to the path of your certificate image
+                        -->
+                        <a href="Certificate/Google Data Analytics.pdf" target="_blank" class="certificate__card swiper-slide">
+                            <div class="certificate__image-wrapper">
+                                <img src="Certificate/Google Data Analytics.png" alt="certificate for AI For Everyone" class="certificate__img">
+                                <div class="certificate__view-overlay">
+                                    <i class="ri-eye-line"></i>
+                                    <span>View Certificate</span>
+                                </div>
                             </div>
-                        </div> -->
-                        <!--========= testimonial 2 ============ -->
-                        <!-- <div class="testimonial__card swiper-slide">
-                            <img src="assets/img/testimonial2.jpg" alt="John Clarke" class="testimonial__img">
-                            <div class="testimonial__content">
-                                <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur. Dignissim
-                                    tincidunt egestas vitae porttitor nulla gravida commodo.</p>
-                                <h3 class="testimonial__name">John Clarke</h3>
-                                <span class="testimonial__occupation">Web Developer at Facebook</span>
+                            <div class="certificate__content">
+                                <h3 class="certificate__title">Google Data Analytics</h3>
+                                <p class="certificate__issuer">Issued by Coursera</p>
+                                <ul class="certificate__skills-list">
+                                    <li><i class="ri-check-line"></i>Data Analysis</li>
+                                    <li><i class="ri-check-line"></i>Machine Learning</li>
+                                    <li><i class="ri-check-line"></i>SQL</li>
+                                    <li><i class="ri-check-line"></i>Data Visualization (Tableau)</li>
+                                </ul>
                             </div>
-                        </div> -->
-                        <!--========= testimonial 3 ============ -->
-                        <!-- <div class="testimonial__card swiper-slide">
-                            <img src="assets/img/testimonial3.jpg" alt="Emily Walker" class="testimonial__img">
-                            <div class="testimonial__content">
-                                <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur. Dignissim
-                                    tincidunt egestas vitae porttitor nulla gravida commodo.</p>
-                                <h3 class="testimonial__name">Emily Walker</h3>
-                                <span class="testimonial__occupation">Backend Developer at Google
-                                </span>
+                        </a>
+
+                        <!--========= Certificate 2 ============ -->
+                        <a href="Certificate/Introduction To Machine Learning - IITKGP.pdf" target="_blank" class="certificate__card swiper-slide">
+                            <div class="certificate__image-wrapper">
+                                <img src="certificate/NPTEL.png" alt="certificate for Deep Learning" class="certificate__img">
+                                <div class="certificate__view-overlay">
+                                    <i class="ri-eye-line"></i>
+                                    <span>View Certificate</span>
+                                </div>
                             </div>
-                        </div> -->
+                            <div class="certificate__content">
+                                <h3 class="certificate__title">Introduction To Machine Learning</h3>
+                                <p class="certificate__issuer">NPTEL</p>
+                                <ul class="certificate__skills-list">
+                                    <li><i class="ri-check-line"></i>Machine Learning (Concepts/Algorithms)</li>
+                                    <li><i class="ri-check-line"></i>Statistical Analysis (Probability/Regression)</li>
+                                    <li><i class="ri-check-line"></i>Python Programming</li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <!--========= Certificate 3 ============ -->
+                        <a href="Certificate/Tushar   Kumar (Google AI-ML).pdf" target="_blank" class="certificate__card swiper-slide">
+                            <div class="certificate__image-wrapper">
+                                <img src="Certificate/aicte.png" alt="certificate for Data Science" class="certificate__img">
+                                <div class="certificate__view-overlay">
+                                    <i class="ri-eye-line"></i>
+                                    <span>View Certificate</span>
+                                </div>
+                            </div>
+                            <div class="certificate__content">
+                                <h3 class="certificate__title">Google AI-ML</h3>
+                                <p class="certificate__issuer">AICTE</p>
+                                <ul class="certificate__skills-list">
+                                    <li><i class="ri-check-line"></i>Artificial Intelligence</li>
+                                    <li><i class="ri-check-line"></i>Python</li>
+                                    <li><i class="ri-check-line"></i>Data Visualization</li>
+                                    <li><i class="ri-check-line"></i>SQL</li>
+                                    <li
+                                </ul>
+                            </div>
+                        </a>
+                        <!--===========Certificate 4 =============-->
+                        <a href="Certificate/TUSHAR KUMAR (AICTE).pdf" target="_blank" class="certificate__card swiper-slide">
+                            <div class="certificate__image-wrapper">
+                                <img src="Certificate/AWS.png" alt="certificate for AI For Everyone" class="certificate__img">
+                                <div class="certificate__view-overlay">
+                                    <i class="ri-eye-line"></i>
+                                    <span>View Certificate</span>
+                                </div>
+                            </div>
+                            <div class="certificate__content">
+                                <h3 class="certificate__title">Artificial Intelligence (AI) & Machine Learning (ML)</h3>
+                                <p class="certificate__issuer">AICTE</p>
+                                <ul class="certificate__skills-list">
+                                    <li><i class="ri-check-line"></i>Artificial Intelligence</li>
+                                    <li><i class="ri-check-line"></i>Machine Learning</li>
+                                    <li><i class="ri-check-line"></i>AWS/Cloud Concepts</li>
+                                </ul>
+                            </div>
+                        </a>
+                        <!--============Certificate 5 ===============-->
+                        <a href="Certificate/Tushar Kumar(ISM Dhanbad ).pdf" target="_blank" class="certificate__card swiper-slide">
+                            <div class="certificate__image-wrapper">
+                                <img src="Certificate/Ism.png" alt="Certificate for Deep Learning" class="certificate__img">
+                                <div class="certificate__view-overlay">
+                                    <i class="ri-eye-line"></i>
+                                    <span>View Certificate</span>
+                                </div>
+                            </div>
+                            <div class="certificate__content">
+                                <h3 class="certificate__title">HackFest'24</h3>
+                                <p class="certificate__issuer">ISM Dhanbad</p>
+                                <ul class="certificate__skills-list">
+                                    <li><i class="ri-check-line"></i>Problem-Solving</li>
+                                    <li><i class="ri-check-line"></i>Innovation/Prototyping (Hackathon)</li>
+                                    <li><i class="ri-check-line"></i>Teamwork/Collaboration</li>
+                                </ul>
+                            </div>
+                        </a>
                     </div>
+                    <!-- This pagination is targeted by main.js -->
                     <div class="swiper-pagination"></div>
+
+                    <!-- ==== REMOVED: Swiper Navigation Arrows ==== -->
+                    <!--
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                    -->
+                    <!-- ======================================= -->
+
                 </div>
             </div>
         </section>
@@ -328,12 +530,10 @@
             <div class="container">
                 <div class="d-grid contact__wrapper">
                     <div class="contact__content">
-                        <h2 class="contact__title">Interested in working together? Let's talk</h2>
+                        <h2 class="contact__title">Interested in working together?</h2>
                         <p class="contact__description">
-                            Ready to work together on your next software project? I'd love to hear from you! 
-                            Feel free to get in touch using the contact information below.
-                            Whether uou have a specific project in mind or just want to chat about your software development needs , I am here to help.
-                            I will respond to your message as quickly as possible and look forward to connecting with you soon.
+                            I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+                            your vision. Let's build something amazing together.
                         </p>
                     </div>
                     <div class="contact__btn">
@@ -343,81 +543,16 @@
             </div>
         </section>
     </main>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Back to Top Button</title>
-<style>
-    /* Styles for back to top button */
-    #back-to-top {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 99;
-        cursor: pointer;
-        background-color: #25ab75;
-        color: #fff;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        outline: none;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-    #back-to-top:hover {
-        background-color: #25ab75;
-    }
-    #back-to-top::after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 2px;
-        background-color: #25ab75;
-        transition: width 0.3s;
-    }
-    #back-to-top:hover::after {
-        width: 80px;
-    }
-</style>
-</head>
-<body>
-    <p class="footer__copyright">&copy; Tushar Kumar. All Rights Reserved</p>
+    
+    <!--=================== Footer ====================-->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <p class="footer__copyright">&copy; Tushar Kumar. All Rights Reserved</p>
+        </div>
+    </footer>
 
-<!-- Back to top button -->
-<button id="back-to-top" onclick="topFunction()">Back to Top</button>
-
-<script>
-// Get the button
-var mybutton = document.getElementById("back-to-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-</script>
-
-</body>
-</html>
-
-
+    <!--=================== Back to Top Button ====================-->
+    <button id="back-to-top"><i class="ri-arrow-up-s-line"></i></button>
 
     <!--=================== SwiperJS  ====================-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -425,8 +560,15 @@ function topFunction() {
     <!--=================== ScrollReveal ==================-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    
     <!--=================== Main JS ====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    
     <script src="main.js"></script>
 </body>
 
 </html>
+
+
