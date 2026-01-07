@@ -449,6 +449,9 @@ Hero
 }
 .hero__img {
   width: 300px;
+  height: 300px;              /* REQUIRED for cropping */
+  object-fit: cover;          /* Center crop */
+  object-position: center;    /* Crop from center */
   justify-self: center;
   border-radius: 50%;
   border: 5px solid var(--color-border);
